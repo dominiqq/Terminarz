@@ -1,7 +1,7 @@
-package pk.edu.pl.view;
+package pk.edu.pl.presenter;
 
 import pk.edu.pl.model.*;
-import pk.edu.pl.presenter.*;
+import pk.edu.pl.view.terminalMain;
 
 import java.util.*;
 
