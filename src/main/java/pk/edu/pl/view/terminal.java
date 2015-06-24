@@ -2,12 +2,14 @@ package pk.edu.pl.view;
 
 import pk.edu.pl.model.*;
 import pk.edu.pl.presenter.*;
+
 import java.util.*;
-import java.util.List;
 
 public class terminal extends terminalMain{
 
-
+	FileAbstract fileMain = new File();
+	FileAbstract file = new FileDekorator(fileMain);
+	
 	public void launch() {
 		// TODO Auto-generated method stub
         System.out.println("TERMINARZ"); //naglowek
@@ -35,12 +37,12 @@ public class terminal extends terminalMain{
                 case 1: //tworzenie nowego rekordu
                     Item item = Input.createItem();
                     if (item != null) { //jezeli wszystko poszlo ok
-                        File.writeItem(item); //zapisz do bazy tekstowej
+                        file.writeItem(item); //zapisz do bazy tekstowej
  ///------------- wyświetlenie przyjętego zadania 
                     }
                     break;
                 case 2: //wyswietlanie zadan, sortowanie po dacie i starcie zadania
-                    List<Item> itemList = File.read(); //zycztaj rekordy z bazy tekstowej
+                    List<Item> itemList = file.read(); //zycztaj rekordy z bazy tekstowej
                     Collections.sort(itemList); //sortuj (wedlug regul opisanych w metodach 'comapare' w klasie Item)
 
                     String string = Adapter.getTimeTable(itemList); //Przygotowuje terminarz na 7 dni
