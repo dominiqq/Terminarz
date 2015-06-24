@@ -2,7 +2,7 @@ package pk.edu.pl.view;
 
 import java.util.*;
 
-public class terminal implements view{
+public class terminal extends terminalMain{
 
 	@Override
 	public void launch() {
