@@ -39,10 +39,15 @@ public class Input implements presenter {
     }
 
     //wypisuje string i zczytuje wartosc z klawiatury
+    private static Scanner keyboard = new Scanner(System.in);
     static String printAndRead(String str) {
-        Scanner keyboard = new Scanner(System.in); //obiekt zycztujacy z klawiatury
+        keyboard = new Scanner(System.in); //obiekt zycztujacy z klawiatury
         System.out.println(str); //wypisuje string dla uzytkownika
         String ret = keyboard.nextLine(); //czytanie az do napotkania znaku nowej lini
         return ret;
+    }
+    
+    static void close(){
+        keyboard.close();	
     }
 }
