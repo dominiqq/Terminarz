@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.*;
 
-public class File {
+public class File extends FileAbstract{
     static String fileName = "db.csv";
 
     //zwraca liste itemow przeczytana z pliku bazy tekstowej
-    public static List<Item> read() {
+    public  List<Item> read() {
         List<Item> ret = new ArrayList<Item>(); //tworzy pusty obviekt listy
         String line = new String(); //bufor przechowywujacy jedna linie tekstu
 
@@ -34,7 +34,7 @@ public class File {
 
 
     //zapisuje item w bazie tekstowej
-    public static void writeItem(Item item) {
+    public  void writeItem(Item item) {
         String string = Adapter.itemToString(item); //konwersja itemu do stringu
 
         //instrukcje w nawiasach try, nie trzeba zamykac pliku
@@ -50,4 +50,6 @@ public class File {
 
         System.out.println("Zadanie zostalo zapisane");
     }
+
+
 }
