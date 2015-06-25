@@ -43,7 +43,6 @@ public class Item implements InterfaceForItem , Comparator<Item>, Comparable<Ite
         this.job = job;
     }
 
-    //metody odczytujace wartosci pol
     public String getOwner() {
         return this.owner;
     }
