@@ -11,7 +11,6 @@ public class terminal extends terminalMain{
 	FileAbstract file = new FileDekorator(fileMain);
 	
 	public void launch() {
-		// TODO Auto-generated method stub
         System.out.println("TERMINARZ"); //naglowek
         int ret = 0; //ustawienie poczatkowej wartosci wyboru uzytkownika
         Scanner keyboard = new Scanner(System.in); //tworzy obiekt czytajacy z klawiatury
