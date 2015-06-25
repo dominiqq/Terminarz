@@ -17,5 +17,4 @@ public class startApp {
 
 		term.launch();
 	}
-
 }
